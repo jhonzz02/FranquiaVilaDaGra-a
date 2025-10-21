@@ -3,7 +3,8 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 export default function Carrossel() {
-  const scrollRef = useRef(null);
+  // 👉 Tipamos corretamente o ref como HTMLDivElement
+  const scrollRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
