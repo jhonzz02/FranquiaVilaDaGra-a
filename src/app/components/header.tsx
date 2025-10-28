@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Carrossel from "./carrossel";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 export default function Header() {
   return (
@@ -24,19 +26,19 @@ export default function Header() {
       </header>
       {/* hero */}
       <div
-        className="bg-[#0A0A0A] h-[500px] flex items-center justify-center flex-col"
+        className="bg-[#0A0A0A] h-screen flex items-center justify-center flex-col"
         style={{ fontFamily: '"Times New Roman", serif' }}
       >
-        <h1 className="text-[#7f580a] text-[42px] text-center">
+        <h1 className="text-[#7f580a] text-[42px] text-center font-bold">
           VILA DA GRAÇA
         </h1>
         <h2 className="text-[#7f580a] text-[30px] text-center">
           Um universo de sabores. A sua vila, o seu momento.
         </h2>
       </div>
-      {/* section 2 ------------------------------------ */}
+      {/* section 2 sobre ------------------------------------ */}
       <div
-        className="bg-white flex gap-6 justify-center items-center w-full py-6"
+        className="bg-white flex gap-6 max-lg:flex-col justify-center items-center w-full py-6"
         style={{ fontFamily: '"Times New Roman", serif' }}
       >
         {/* imagem do ambiente */}
@@ -52,7 +54,7 @@ export default function Header() {
         </div>
         {/* texto */}
         <div className="flex flex-col text-black w-full max-w-[400px]">
-          <h1 className="text-[42px] text-left">Nossa Essência</h1>
+          <h1 className="text-[42px] text-left font-bold">Nossa Essência</h1>
           <p className="text-[21px] text-left">
             A Vila da Graça nasceu da paixão por unir pessoas através da boa
             comida. Somos um espaço onde a diversidade de sabores encontra a
@@ -64,20 +66,108 @@ export default function Header() {
           </p>
         </div>
       </div>
-      {/* section 3 ------------------------------------ */}
+      {/* section 3 cardapio (carrossel) ------------------------------------ */}
       <div
         className="bg-[#2E201B] flex flex-col justify-center items-center py-6"
         style={{ fontFamily: '"Times New Roman", serif' }}
       >
-        <h1 className="text-[42px]">Um Cardápio para Todos os Gostos</h1>
+        <h1 className="text-[42px] font-bold">
+          Um Cardápio para Todos os Gostos
+        </h1>
         <p className="text-[21px]">
           Explore a variedade que faz da nossa vila, a sua vila.
         </p>
         {/* carrossel */}
         <Carrossel />
       </div>
-      {/* section 4 ------------------------------------ */}
-      <div></div>
+      {/* section 4 modelos ------------------------------------ */}
+      <div
+        className="flex flex-col justify-center items-center gap-6 py-6 bg-white"
+        style={{ fontFamily: '"Times New Roman", serif' }}
+      >
+        <h1 className="text-[42px] text-black text-center font-bold">
+          Dois Modelos, Uma Só Paixão
+        </h1>
+        <p className="text-[30px] text-black text-center">
+          Escolha o formato de franquia que mais combina com seu perfil
+          empreendedor.
+        </p>
+        {/* cards */}
+        <div className="flex max-lg:flex-col justify-center items-center gap-6">
+          {/* left card */}
+          <div className="flex flex-col items-center justify-center max-w-[400px] min-h-[400px] max-h-[400px] bg-[#2E201B] gap-6 p-6 rounded-2xl">
+            <Image
+              src="/logo.jpg"
+              alt="Logo Vila da Graça"
+              width={80}
+              height={80}
+              priority
+              className="rounded-full"
+            />
+            <h1 className="text-[34px] text-center">Vila Da Graça</h1>
+            <p className="text-[20px] text-center">
+              A experiência completa. Um restaurante com ambiente sofisticado,
+              serviço de mesa e nosso cardápio completo. Ideal para centros
+              urbanos e pontos com grande fluxo de pessoas.
+            </p>
+          </div>
+          {/* right card */}
+          <div className="flex flex-col items-center justify-center max-w-[400px] min-h-[400px] max-h-[400px] bg-[#2E201B] gap-6 p-6 rounded-2xl">
+            <Image
+              src="/logo-express.jpg"
+              alt="Logo Vila da Graça"
+              width={80}
+              height={80}
+              priority
+              className="rounded-full"
+            />
+            <h1 className="text-[34px] text-center">Vila da Graça Express</h1>
+            <p className="text-[20px] text-center">
+              O mesmo sabor com foco em agilidade. Perfeito para praças de
+              alimentação, quiosques e pontos de delivery, com um menu otimizado
+              para rapidez e conveniência.
+            </p>
+          </div>
+        </div>
+      </div>
+      {/* section 5 franquia ------------------------------------ */}
+      <div
+        className="flex flex-col justify-center items-center gap-6 py-6 bg-[#2E201B]"
+        style={{ fontFamily: '"Times New Roman", serif' }}
+      >
+        <h1 className="text-[42px] text-center">
+          Seja um Franqueado de Sucesso
+        </h1>
+        <p className="text-[21px] text-center">
+          Leve a marca Vila da Graça para sua cidade. Oferecemos um modelo de
+          negócio lucrativo com suporte completo, treinamento e a força de uma
+          marca consolidada.
+        </p>
+        <a
+          href=""
+          className="text-[#2E201B] text-[24px] font-bold bg-[#C5A57E] py-2 px-4 rounded-2xl"
+        >
+          Quero Fazer Parte!
+        </a>
+      </div>
+      {/* section 6 contato ------------------------------------ */}
+      <div
+        className="flex flex-col justify-center items-center gap-6 py-6 bg-[#2E201B]"
+        style={{ fontFamily: '"Times New Roman", serif' }}
+      >
+        {/* social media */}
+        <div className="flex gap-6">
+          <FaInstagram size={30}/>
+          <FaFacebook size={30}/>
+          <IoLogoWhatsapp size={30}/>
+        </div>
+        {/* copyright */}
+        <div>
+          <p className="text-center">
+            © 2025 Vila da Graça Franquias. Todos os direitos reservados.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
