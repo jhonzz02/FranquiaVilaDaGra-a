@@ -6,7 +6,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 export default function Header() {
   return (
     <div>
-      <header className="flex justify-between items-center bg-[#2E201B] backdrop-blur-sm px-6 py-2">
+      <header className="flex justify-between items-center px-6 py-2 sticky top-0 z-50 bg-[#2E201B] backdrop-blur-sm">
         <div>
           <Image
             src="/logo.jpg"
@@ -18,10 +18,14 @@ export default function Header() {
           />
         </div>
         <div
+          className="flex gap-6 max-sm:hidden font-bold text-xl"
           style={{ fontFamily: '"Times New Roman", serif' }}
-          className="font-bold text-xl"
         >
-          CONTATO
+          <a href="">Sobre</a>
+          <a href="">Cardápio</a>
+          <a href="">Modelos</a>
+          <a href="">Franquia</a>
+          <a href="">Contato</a>
         </div>
       </header>
       {/* hero */}
@@ -38,7 +42,7 @@ export default function Header() {
       </div>
       {/* section 2 sobre ------------------------------------ */}
       <div
-        className="bg-white flex gap-6 max-lg:flex-col justify-center items-center w-full py-6"
+        className="bg-white flex gap-6 max-lg:flex-col justify-center items-center w-full py-12"
         style={{ fontFamily: '"Times New Roman", serif' }}
       >
         {/* imagem do ambiente */}
@@ -68,13 +72,13 @@ export default function Header() {
       </div>
       {/* section 3 cardapio (carrossel) ------------------------------------ */}
       <div
-        className="bg-[#2E201B] flex flex-col justify-center items-center py-6"
+        className="bg-[#2E201B] flex flex-col justify-center items-center py-12"
         style={{ fontFamily: '"Times New Roman", serif' }}
       >
-        <h1 className="text-[42px] font-bold">
+        <h1 className="text-center text-[42px] font-bold">
           Um Cardápio para Todos os Gostos
         </h1>
-        <p className="text-[21px]">
+        <p className="text-center text-[21px]">
           Explore a variedade que faz da nossa vila, a sua vila.
         </p>
         {/* carrossel */}
@@ -82,7 +86,7 @@ export default function Header() {
       </div>
       {/* section 4 modelos ------------------------------------ */}
       <div
-        className="flex flex-col justify-center items-center gap-6 py-6 bg-white"
+        className="flex flex-col justify-center items-center gap-6 py-12 bg-white"
         style={{ fontFamily: '"Times New Roman", serif' }}
       >
         <h1 className="text-[42px] text-black text-center font-bold">
@@ -132,7 +136,7 @@ export default function Header() {
       </div>
       {/* section 5 franquia ------------------------------------ */}
       <div
-        className="flex flex-col justify-center items-center gap-6 py-6 bg-[#2E201B]"
+        className="flex flex-col justify-center items-center gap-6 py-12 bg-[#2E201B]"
         style={{ fontFamily: '"Times New Roman", serif' }}
       >
         <h1 className="text-[42px] text-center">
@@ -152,14 +156,14 @@ export default function Header() {
       </div>
       {/* section 6 contato ------------------------------------ */}
       <div
-        className="flex flex-col justify-center items-center gap-6 py-6 bg-[#2E201B]"
+        className="flex flex-col justify-center items-center gap-6 py-12 bg-[#2E201B]"
         style={{ fontFamily: '"Times New Roman", serif' }}
       >
         {/* social media */}
         <div className="flex gap-6">
-          <FaInstagram size={30}/>
-          <FaFacebook size={30}/>
-          <IoLogoWhatsapp size={30}/>
+          <FaInstagram size={30} />
+          <FaFacebook size={30} />
+          <IoLogoWhatsapp size={30} />
         </div>
         {/* copyright */}
         <div>
