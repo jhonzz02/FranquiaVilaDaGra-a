@@ -17,20 +17,20 @@ export default function Header() {
             className="rounded-full"
           />
         </div>
-        <div
+        <nav
           className="flex gap-6 max-sm:hidden font-bold text-xl"
           style={{ fontFamily: '"Times New Roman", serif' }}
         >
-          <a href="">Sobre</a>
-          <a href="">Cardápio</a>
-          <a href="">Modelos</a>
-          <a href="">Franquia</a>
-          <a href="">Contato</a>
-        </div>
+          <a href="#sobre">Sobre</a>
+          <a href="#cardapio">Cardápio</a>
+          <a href="#modelos">Modelos</a>
+          <a href="#franquia">Franquia</a>
+          <a href="#contato">Contato</a>
+        </nav>
       </header>
       {/* hero */}
       <div
-        className="bg-[#0A0A0A] h-screen flex items-center justify-center flex-col"
+        className="bg-[#0A0A0A] h-[calc(100vh-76px)] flex items-center justify-center flex-col"
         style={{ fontFamily: '"Times New Roman", serif' }}
       >
         <h1 className="text-[#7f580a] text-[42px] text-center font-bold">
@@ -42,7 +42,8 @@ export default function Header() {
       </div>
       {/* section 2 sobre ------------------------------------ */}
       <div
-        className="bg-white flex gap-6 max-lg:flex-col justify-center items-center w-full py-12"
+        id="sobre"
+        className="bg-white flex gap-6 max-lg:flex-col justify-center items-center w-full py-12 px-6 min-h-[600px]"
         style={{ fontFamily: '"Times New Roman", serif' }}
       >
         {/* imagem do ambiente */}
@@ -58,8 +59,10 @@ export default function Header() {
         </div>
         {/* texto */}
         <div className="flex flex-col text-black w-full max-w-[400px]">
-          <h1 className="text-[42px] text-left font-bold">Nossa Essência</h1>
-          <p className="text-[21px] text-left">
+          <h1 className="text-[42px] text-left max-lg:text-center font-bold">
+            Nossa Essência
+          </h1>
+          <p className="text-[21px] text-left max-lg:text-center">
             A Vila da Graça nasceu da paixão por unir pessoas através da boa
             comida. Somos um espaço onde a diversidade de sabores encontra a
             tradição, criando uma experiência única. Dos lanches rápidos aos
@@ -72,7 +75,8 @@ export default function Header() {
       </div>
       {/* section 3 cardapio (carrossel) ------------------------------------ */}
       <div
-        className="bg-[#2E201B] flex flex-col justify-center items-center py-12"
+        id="cardapio"
+        className="bg-[#2E201B] flex flex-col justify-center items-center py-12 min-h-[600px]"
         style={{ fontFamily: '"Times New Roman", serif' }}
       >
         <h1 className="text-center text-[42px] font-bold">
@@ -86,7 +90,8 @@ export default function Header() {
       </div>
       {/* section 4 modelos ------------------------------------ */}
       <div
-        className="flex flex-col justify-center items-center gap-6 py-12 bg-white"
+        id="modelos"
+        className="flex flex-col justify-center items-center gap-6 px-6 py-12 bg-white"
         style={{ fontFamily: '"Times New Roman", serif' }}
       >
         <h1 className="text-[42px] text-black text-center font-bold">
@@ -136,6 +141,7 @@ export default function Header() {
       </div>
       {/* section 5 franquia ------------------------------------ */}
       <div
+        id="franquia"
         className="flex flex-col justify-center items-center gap-6 py-12 bg-[#2E201B]"
         style={{ fontFamily: '"Times New Roman", serif' }}
       >
@@ -156,14 +162,22 @@ export default function Header() {
       </div>
       {/* section 6 contato ------------------------------------ */}
       <div
+        id="contato"
         className="flex flex-col justify-center items-center gap-6 py-12 bg-[#2E201B]"
         style={{ fontFamily: '"Times New Roman", serif' }}
       >
         {/* social media */}
         <div className="flex gap-6">
-          <FaInstagram size={30} />
-          <FaFacebook size={30} />
-          <IoLogoWhatsapp size={30} />
+          <a
+            href="https://www.instagram.com/viladagraca.salvador?utm_source=ig_web_button_share_sheet&igsh=eGZ2cTM1OThoN3Jv"
+            target="blank"
+          >
+            <FaInstagram size={30} />
+          </a>
+       
+          <a href="" target="blank">
+            <IoLogoWhatsapp size={30} />
+          </a>
         </div>
         {/* copyright */}
         <div>
