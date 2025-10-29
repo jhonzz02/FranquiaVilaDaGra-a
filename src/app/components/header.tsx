@@ -5,7 +5,8 @@ import { IoLogoWhatsapp } from "react-icons/io";
 
 export default function Header() {
   return (
-    <div>{/* bg-[#2E201B] */}
+    <div>
+      {/* bg-[#2E201B] */}
       <header className="flex justify-between items-center px-6 py-2 sticky top-0 z-50 bg-[#0A0A0A] backdrop-blur-sm">
         <div>
           <Image
@@ -142,23 +143,25 @@ export default function Header() {
       {/* section 5 franquia ------------------------------------ */}
       <div
         id="franquia"
-        className="flex flex-col justify-center items-center gap-6 py-12 bg-[#2E201B]"
+        className=" py-12 bg-[#2E201B]"
         style={{ fontFamily: '"Times New Roman", serif' }}
       >
-        <h1 className="text-[42px] text-center">
-          Seja um Franqueado de Sucesso
-        </h1>
-        <p className="text-[21px] text-center">
-          Leve a marca Vila da Graça para sua cidade. Oferecemos um modelo de
-          negócio lucrativo com suporte completo, treinamento e a força de uma
-          marca consolidada.
-        </p>
-        <a
-          href=""
-          className="text-[#2E201B] text-[24px] font-bold bg-[#C5A57E] py-2 px-4 rounded-2xl"
-        >
-          Quero Fazer Parte!
-        </a>
+        <div className="flex flex-col justify-center items-center gap-6 px-6">
+          <h1 className="text-[42px] text-center">
+            Seja um Franqueado de Sucesso
+          </h1>
+          <p className="text-[21px] text-center">
+            Leve a marca Vila da Graça para sua cidade. Oferecemos um modelo de
+            negócio lucrativo com suporte completo, treinamento e a força de uma
+            marca consolidada.
+          </p>
+          <a
+            href=""
+            className="text-[#2E201B] text-[24px] font-bold bg-[#C5A57E] py-2 px-4 rounded-2xl"
+          >
+            Quero Fazer Parte!
+          </a>
+        </div>
       </div>
       {/* section 6 contato ------------------------------------ */}
       <div
@@ -174,7 +177,7 @@ export default function Header() {
           >
             <FaInstagram size={30} />
           </a>
-       
+
           <a href="" target="blank">
             <IoLogoWhatsapp size={30} />
           </a>
