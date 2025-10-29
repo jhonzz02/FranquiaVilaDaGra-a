@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Carrossel from "./carrossel";
-import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 
 export default function Header() {
   return (
-    <div>
-      <header className="flex justify-between items-center px-6 py-2 sticky top-0 z-50 bg-[#2E201B] backdrop-blur-sm">
+    <div>{/* bg-[#2E201B] */}
+      <header className="flex justify-between items-center px-6 py-2 sticky top-0 z-50 bg-[#0A0A0A] backdrop-blur-sm">
         <div>
           <Image
             src="/logo.jpg"
